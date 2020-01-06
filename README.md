@@ -5,3 +5,5 @@ For example, if you're trying to do XHR requests to install a wordpress plugin f
 
 
 It's a python wrapper around the xxd command.
+
+Updated for python3
