@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 #
 # Simple tool to take an arbitrary binary (DLL, exe, etc.) 
@@ -22,7 +22,7 @@ import os
 def generateCharEncoding(filename):
 	outputEncoding = subprocess.check_output(['xxd', '-i', filename])
 
-	return outputEncoding
+	return outputEncoding.decode()
 
 
 
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 		parser.print_help()
 		sys.exit()
 
-	print "Converting file into JavaScript friendly hex..."
+	print ("Converting file into JavaScript friendly hex...")
 	print
 
 	
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 		javaScriptData += "\n" + javaScriptList[i]
 
 
-	print javaScriptData
+	print (javaScriptData)
 
 
 
